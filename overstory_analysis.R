@@ -35,6 +35,9 @@ pred_ht <- function(x,y)
 #Populate data table with tree height data.
 overstory.table$Height_ft <- sapply(overstory.table$Diameter_in, pred_ht, y = 1)
 
+#Add height to love crown
+overstory.table$Ht2LC_ft <- overstory.table$Height_ft/2
+
 #Identify date and time.
 dt <- Sys.Date()
 tm <- format(Sys.time(), format = "%H.%M.%S", 
