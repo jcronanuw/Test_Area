@@ -35,6 +35,9 @@ pred_ht <- function(x,y)
 #Populate data table with tree height data.
 overstory.table$Height_ft <- sapply(overstory.table$Diameter_in, pred_ht, y = 1)
 
+#Conflicting code
+1 + 2
+
 #Identify date and time.
 dt <- Sys.Date()
 tm <- format(Sys.time(), format = "%H.%M.%S", 
