@@ -6,7 +6,7 @@
 setwd("C:/Users/jcronan/Documents/GitHub/Test_Area/")
 
 #Import input table template.
-overstory.table <- read.table("overstory_table.csv", header=TRUE, 
+overstory.table <- read.table("overstory_table.csv", header=TRUE,
                          sep=",", na.strings="NA", dec=".", strip.white=TRUE)
 
 
@@ -36,16 +36,15 @@ pred_ht <- function(x,y)
 overstory.table$Height_ft <- sapply(overstory.table$Diameter_in, pred_ht, y = 1)
 
 #Conflicting code
-1 + 2
+1 + 2 + 3
 
 #Identify date and time.
 dt <- Sys.Date()
-tm <- format(Sys.time(), format = "%H.%M.%S", 
+tm <- format(Sys.time(), format = "%H.%M.%S",
              tz = "", usetz = FALSE)
 
 #Save file
-write.csv(overstory.table, file = paste("output_file_on_",dt,"_",tm,".csv",sep = ""), 
+write.csv(overstory.table, file = paste("output_file_on_",dt,"_",tm,".csv",sep = ""),
           quote = TRUE, eol = "\n", na = "NA", row.names = FALSE)
 
 #END
-
