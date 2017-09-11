@@ -38,6 +38,10 @@ overstory.table$Height_ft <- sapply(overstory.table$Diameter_in, pred_ht, y = 1)
 #Conflicting code
 1 + 2 + 3
 
+#Add some more conflicting code
+3 + 4
+
+
 #Add height to love crown
 overstory.table$Ht2LC_ft <- overstory.table$Height_ft/2
 
